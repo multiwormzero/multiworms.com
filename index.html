@@ -1,59 +1,18 @@
-<!-- <html>
-<h1>Hello World</h1><br />
-<p>
-	Roadmap<br/>
-	<ul>
-		<li>Let's get some color and whatnot</li>
-		<li><span style="text-decoration: line-through;">Change hosting from S3 to Amplify</span></li>
-		<li><span style="text-decoration: line-through;">Put this sweet, sweet site into a public repo so that anyone can copy or contribute</span></li>
-	</ul>
-</p>
-</html> -->
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.png" />
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    
     <title>MultiWorms NFT</title>
 
+    <link rel="icon" href="/img/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-	<link href="https://fonts.googleapis.com/css2?family=Bungee&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/app.css">
-	<!-- <link rel="stylesheet" href="/app.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
-	<link href="/fa/css/all.css" rel="stylesheet">
-
-	<script>window.global = window;</script>
-
-	<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-
-	
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-e27024ce.css">
-	<link rel="stylesheet" href="/_app/assets/Offcanvas.svelte_svelte_type_style_lang-82c1b07d.css">
-	<link rel="stylesheet" href="/_app/assets/balanceOf-d3b10e74.css">
-	<link rel="stylesheet" href="/_app/assets/pages/index.svelte-2fa83e73.css">
-	<link rel="modulepreload" href="/_app/start-c1bf94d5.js">
-	<link rel="modulepreload" href="/_app/chunks/index-4a99f31c.js">
-	<link rel="modulepreload" href="/_app/chunks/index-530b61bc.js">
-	<link rel="modulepreload" href="/_app/chunks/preload-helper-e4860ae8.js">
-	<link rel="modulepreload" href="/_app/chunks/singletons-d1fb5791.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-12bac190.js">
-	<link rel="modulepreload" href="/_app/chunks/navigation-0e6511d1.js">
-	<link rel="modulepreload" href="/_app/chunks/stores-6a82f21b.js">
-	<link rel="modulepreload" href="/_app/chunks/transitions-15bdadcf.js">
-	<link rel="modulepreload" href="/_app/chunks/Offcanvas.svelte_svelte_type_style_lang-e4d60131.js">
-	<link rel="modulepreload" href="/_app/chunks/ModalFooter-d2b7f702.js">
-	<link rel="modulepreload" href="/_app/chunks/Portal-8e8fcb07.js">
-	<link rel="modulepreload" href="/_app/chunks/Offcanvas-ba9a7ab6.js">
-	<link rel="modulepreload" href="/_app/chunks/AddToMetaMask-fd14a418.js">
-	<link rel="modulepreload" href="/_app/chunks/balanceOf-f77d2ae8.js">
-	<link rel="modulepreload" href="/_app/chunks/balanceOf-69eb8af9.js">
-	<link rel="modulepreload" href="/_app/pages/index.svelte-f2f9b182.js">
-    <link rel="modulepreload" as="script" crossorigin="" href="/_app/error.svelte-33ffe68f.js" /> -->
   </head>
 
   <body class="text-high-emphasis bg-dark">
@@ -82,21 +41,23 @@
           <div class="row mb-1">
             <div class="col-md-4 offset-md-8">
               <div class="input-group">
-                <input readonly
+                <!-- <input readonly
                   type="text"
-                  class="form-control rounded-20 svelte-1d0o94b"
+                  class="form-control rounded-pill"
                   placeholder="Search By Worm #"
                   aria-label="search"
                   aria-describedby="search"
                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
-                />
+                /> -->
+                <input type="text" class="form-control rounded-20" placeholder="Search By Worm #" aria-label="search" aria-describedby="search" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                <span class="input-group-text rounded-20 hover-pointer" id="search"><i class="fas fa-search"></i></span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div>
-        <div id="hero" class="svelte-100nher">
+      <div class="main-content">
+        <div>
           <div class="container">
             <div class="row align-items-center">
               <div class="col-12 col-md-5 col-lg-6 order-md-2 order-xs-1">
@@ -159,53 +120,14 @@
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="toast-container bottom-right svelte-1rg6zyw"
-        style="width: 320px"
-      >
-        <ul class="svelte-1rg6zyw"></ul>
-      </div>
-      <div
-        class="toast-container bottom-left svelte-1rg6zyw"
-        style="width: 320px"
-      >
-        <ul class="svelte-1rg6zyw"></ul>
-      </div>
-      <div
-        class="toast-container top-right svelte-1rg6zyw"
-        style="width: 320px"
-      >
-        <ul class="svelte-1rg6zyw"></ul>
-      </div>
-      <div class="toast-container top-left svelte-1rg6zyw" style="width: 320px">
-        <ul class="svelte-1rg6zyw"></ul>
-      </div>
-      <div
-        class="toast-container top-center svelte-1rg6zyw"
-        style="width: 320px"
-      >
-        <ul class="svelte-1rg6zyw"></ul>
-      </div>
-      <div
-        class="toast-container bottom-center svelte-1rg6zyw"
-        style="width: 320px"
-      >
-        <ul class="svelte-1rg6zyw"></ul>
-      </div>
-      <div
-        class="toast-container center-center svelte-1rg6zyw"
-        style="width: 320px"
-      >
-        <ul class="svelte-1rg6zyw"></ul>
-      </div>
+
       <footer class="text-center text-lg-start bg-dark-2 text-high-emphasis">
         <section class="p-4">
           <div class="container text-center text-md-start mt-5">
             <div class="row">
               <div class="col">
                 <button class="btn btn-outline-primary" type="button">
-                  <img src="/metamask.svg" height="25px" /> Add MultiVAC
+                  <img src="/img/metamask.svg" height="25px" /> Add MultiVAC
                 </button>
               </div>
             </div>
@@ -260,82 +182,6 @@
           <h6>MultiWorms NFT</h6>
         </div>
       </footer>
-      <div
-        id="svelte-announcer"
-        aria-live="assertive"
-        aria-atomic="true"
-        style="
-          position: absolute;
-          left: 0px;
-          top: 0px;
-          clip: rect(0px, 0px, 0px, 0px);
-          clip-path: inset(50%);
-          overflow: hidden;
-          white-space: nowrap;
-          width: 1px;
-          height: 1px;
-        "
-      ></div>
     </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-
-    <div>
-      <div>
-        <div
-          aria-hidden="true"
-          class="offcanvas offcanvas-end bg-dark"
-          style="visibility: hidden"
-          tabindex="-1"
-          text-high-emphasis="true"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title">My Account</h5>
-            <button aria-label="Close" class="btn-close" type="button"></button>
-          </div>
-          <div class="offcanvas-body">
-            <h5>Address:</h5>
-            <div class="row mt-1 mb-1">
-              <div class="col">
-                <button class="btn btn-sm btn-outline-primary">
-                  Disconnect MetaMask
-                </button>
-              </div>
-            </div>
-            <hr />
-            <div class="row mt-1 mb-1">
-              <div class="col">DIRT Balance: <span>0</span></div>
-            </div>
-            <hr />
-            <h6>Portfolio</h6>
-            <div class="row mb-3">
-              <div class="col">
-                <a class="profile-link svelte-1d0o94b" href="#"
-                  >My Genesis Worms</a
-                >
-              </div>
-            </div>
-            <hr />
-            <h6>DirtMail</h6>
-            <div class="row">
-              <div class="col">
-                <a class="profile-link svelte-1d0o94b" href="#">Inbox ()</a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <a class="profile-link svelte-1d0o94b" href="#">Send</a>
-              </div>
-            </div>
-            <div class="row"><div class="col"></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div><div></div></div>
   </body>
 </html>
