@@ -266,3 +266,19 @@ input[type=checkbox] {
     color: black;
     background-color: #ffb563;
 }
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+  .grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: auto;
+  }
