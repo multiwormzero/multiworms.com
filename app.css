@@ -36,6 +36,16 @@ body {
     margin-right: 10px;
 }
 
+.align-text-center {
+    text-align: center;
+}
+
+.align-items-center {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* ****************************** */
 /* Forms */
 /* ****************************** */
@@ -137,8 +147,8 @@ body {
 a {
     color: #C47335 !important;
     font-weight: 700;
-    pointer-events: none;
-    cursor: default;
+    /* pointer-events: none;
+    cursor: default; */
 }
 
 a:hover {
